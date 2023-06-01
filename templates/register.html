@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}新增使用者{% endblock %}
+{% block content %}
+  <h2>新增使用者帳號</h2>
+  <form action="." method="POST" name="form1">
+    {% csrf_token %}
+    <table class="table">
+      <tr>                                                <!--變數名稱-->
+        <th>帳號</th><td ><input type="text" id="username" name="username"/></td>
+      </tr>
+      <tr>
+        <th>密碼</th><td ><input type="password" id="password" name="password"/></td>
+      </tr>
+      <tr>
+        <th>Email</th><td><input type="text" id="email" name="email"/></td>
+      </tr>
+      <tr>
+        <th>FirstName</th><td ><input type="text" id="first_name" name="first_name"/></td>
+      </tr>
+      <tr>
+        <th>LastName</th><td ><input type="text" id="last_name" name="last_name"/></td>
+      </tr>
+      <tr>
+        <th colspan="2">
+          <button type="submit" class="btn btn-primary" name="button" id="button">送出</button>
+          <button type="reset" class="btn btn-primary" name="button2" id="button2">重設</button>
+      </tr>
+    </table>
+    <span style="color:red">{{mess}}</span>
+  </form>
+{% endblock %}

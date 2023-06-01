@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}簡介資訊{% endblock %}
+{% block content %}
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">{{ intro.title }}</h1>
+            <div class="lead">{{ intro.description }}</div>
+        </div>
+    </div>
+
+    <a href="/intro/">Back</a>
+
+{% endblock %}
